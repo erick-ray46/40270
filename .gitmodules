@@ -1,0 +1,3 @@
+[submodule "starwars"]
+	path = starwars
+	url = https://github.com/erick-ray46/starwars.git
