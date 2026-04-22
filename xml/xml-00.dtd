@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE alumnos [
+<!ELEMENT alumno (nombre, nacimiento)>
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT nacimiento (#PCDATA)> 
+]>
