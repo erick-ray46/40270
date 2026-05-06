@@ -1,0 +1,29 @@
+button {
+    width: 60px;
+    height: 60px;
+    padding-bottom: 25px;
+    padding-top: 25px;
+
+}
+button[id="b0"]{
+    width: 33%;
+}
+button[id="bdiv"]{
+    width: 33%;
+}
+button[id="bIgual"]{
+    width: 33%;
+}
+button[id="bBorrar"]{
+    width: 96%;
+}
+div {
+    width: 250px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+input{
+    width: 233.3px;
+}
+
