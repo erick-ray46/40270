@@ -1,55 +1,69 @@
 let botones = document.getElementsByClassName("numeros")
 let resultado = document.getElementById("resultado")
-let prm
-let operacion
 
 for (const key in botones) {
-    if (Object.hasOwnProperty.call(botones, key)) {
-        const boton = botones[key];
-        // console.log(boton)
-        boton.addEventListener("click", pinta)
+    if (!Object.hasOwn(botones, key)) continue;
 
-    }
+    const boton = botones[key];
+    console.log(boton)
+    boton.addEventListener("click", pinta)
 
 }
 
 function pinta(e) {
-    console.log(e.target.innerText)
     resultado.value += e.target.innerText
+}
+
+let Ce = document.getElementById("bCe")
+let operadores = document.getElementsByClassName("operador")
+let prm, operacion
+for (const key in operadores) {
+    if (!Object.hasOwn(operadores, key)) continue;
+
+    const boton = operadores[key];
+    if (boton.innerText == "Ce") {
+        boton.addEventListener("click", limpiar)
+    } else if (boton.innerText == "+") {
+        boton.addEventListener("click", operar)
+    } else if (boton.innerText == "-") {
+        boton.addEventListener("click", operar)
+    } else if (boton.innerText == "*"){
+        boton.addEventListener("click", operar)
+    } else if (boton.innerText == "/"){
+        boton.addEventListener("click", operar)
+    } else if (boton.innerText == "="){
+        boton.addEventListener("click", igual)
+    } else {
+        boton.addEventListener("click", pintar2)
+    }
+
 
 }
+
 function pintar2(e) {
     console.log(e.target.innerText)
 }
-function borrar(e) {
+
+function limpiar() {
     resultado.value = ""
 }
-function sumar(e) {
+
+function operar(e) {
     prm = resultado.value
-    operacion= e.target.innerText
+    operacion = e.target.innerText
     resultado.value = ""
     e.target.style.backgroundColor = "red"
 }
-function igual(e){
+
+function igual(){
     let prm2 = resultado.value
-    if (operacion=="+"){
+    if (operacion == "+"){
         resultado.value = parseInt(prm) + parseInt(prm2)
-    }
-}
-
-let operadores = document.getElementsByClassName("operadores")
-for (const key in operadores) {
-    if (Object.hasOwnProperty.call(operadores, key)) {
-        const boton = operadores[key];
-        // console.log(boton)
-        boton.addEventListener("click", pintar2)
-        if (boton.innerText == "borrar") {
-            boton.addEventListener("click", borrar)
-        } else if (boton.innerText == "+") {
-            boton.addEventListener("click", sumar)
-        } else {
-            boton.addEventListener("click", pintar2)
-        }
-
+    } else if(operacion == "-"){
+        resultado.value = parseInt(prm) - parseInt(prm2)
+    } else if(operacion == "*"){
+        resultado.value = parseInt(prm) * parseInt(prm2)
+    } else if(operacion == "/"){
+        resultado.value = parseInt(prm) / parseInt(prm2)
     }
 }

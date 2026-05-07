@@ -1,29 +1,31 @@
 button {
-    width: 60px;
-    height: 60px;
-    padding-bottom: 25px;
-    padding-top: 25px;
+    width: 25%;
+    height: 50px;
+}
 
-}
 button[id="b0"]{
-    width: 33%;
+    width: 75%;
 }
-button[id="bdiv"]{
-    width: 33%;
-}
-button[id="bIgual"]{
-    width: 33%;
-}
-button[id="bBorrar"]{
-    width: 96%;
-}
+
 div {
-    width: 250px;
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
 }
 
 input{
-    width: 233.3px;
+    width: 100%;
+    height: 30px;
+    border-style: solid;
+    border-color: black;
+    border-width: 3px;
+    margin-bottom: 3px;
 }
 
+.igual {
+    width: 75%;
+}
+
+.operador {
+    background-color: wheat;
+}
