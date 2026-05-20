@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE gramatica SYSTEM "gramatica.dtd">
+<gramatica>
+    <regla>
+        <nombre>impresion</nombre>
+        <definicion> 'print' '( expresion )' ';' </definicion>
+    </regla>
+    <regla>
+        <nombre>comentario</nombre>
+        <definicion> '//' texto  '/' texto '/' </definicion>
+    </regla>
+</gramatica>
